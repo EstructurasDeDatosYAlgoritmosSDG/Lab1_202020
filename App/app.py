@@ -145,7 +145,6 @@ def countElementsByCriteria(criteria, column, lst1, lst2):
     
     return (contador, promedio)
 
-
 def main():
     """
     Método principal del programa, se encarga de manejar todos los metodos adicionales creados
@@ -169,8 +168,9 @@ def main():
                     print("La lista esta vacía")    
                 else: print("La lista tiene "+str(len(lista1))+" elementos")
             elif int(inputs[0])==3: #opcion 3
+                columna = input('Ingrese el nombre de la columna que desea filtrar: ')
                 criteria =input('Ingrese el criterio de búsqueda\n')
-                counter=countElementsFilteredByColumn(criteria, "genres", lista1) #filtrar una columna por criterio  
+                counter=countElementsFilteredByColumn(criteria, columna, lista1) #filtrar una columna por criterio  
                 print("Coinciden ",counter," elementos con el crtierio: ", criteria  )
             elif int(inputs[0])==4: #opcion 4
                 criteria =input('Ingrese el criterio de búsqueda\n')
@@ -181,3 +181,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
